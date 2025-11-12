@@ -72,10 +72,9 @@ CoinBit/
 
 ## Links
 1. Demo Video
-    - 
+    - https://drive.google.com/file/d/1MNhU2qEVY-b5DOOtR8T0oeBhK6Hy4OPo/view?usp=sharing
 2. APK Link
     - https://drive.google.com/file/d/1jl4TAJ4bVvO3b1nfTLkcfYxepXjM9Ui0/view?usp=sharing
-3. 
 
 ## License
 
