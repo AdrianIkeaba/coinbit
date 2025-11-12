@@ -24,7 +24,7 @@ This project is a Crypto Wallet App UI that integrates with the CoinGecko API to
 
 1.  **Clone the repository:**
     ```bash
-    git clone [repository_url]
+    git clone https://github.com/AdrianIkeaba/coinbit
     cd CoinBit
     ```
 
