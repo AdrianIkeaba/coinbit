@@ -1,0 +1,443 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "1953e188e76963896b6d1cd63a07ae65",
+    "entities": [
+      {
+        "tableName": "coins",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `symbol` TEXT NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, `currentPrice` REAL NOT NULL, `marketCap` INTEGER NOT NULL, `marketCapRank` INTEGER, `fullyDilutedValuation` INTEGER, `totalVolume` REAL NOT NULL, `high24h` REAL, `low24h` REAL, `priceChange24h` REAL, `priceChangePercentage24h` REAL, `marketCapChange24h` REAL, `marketCapChangePercentage24h` REAL, `circulatingSupply` REAL, `totalSupply` REAL, `maxSupply` REAL, `ath` REAL, `athChangePercentage` REAL, `athDate` TEXT, `atl` REAL, `atlChangePercentage` REAL, `atlDate` TEXT, `lastUpdated` TEXT NOT NULL, `isFavorite` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentPrice",
+            "columnName": "currentPrice",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketCap",
+            "columnName": "marketCap",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketCapRank",
+            "columnName": "marketCapRank",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "fullyDilutedValuation",
+            "columnName": "fullyDilutedValuation",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "totalVolume",
+            "columnName": "totalVolume",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "high24h",
+            "columnName": "high24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "low24h",
+            "columnName": "low24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChange24h",
+            "columnName": "priceChange24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage24h",
+            "columnName": "priceChangePercentage24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "marketCapChange24h",
+            "columnName": "marketCapChange24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "marketCapChangePercentage24h",
+            "columnName": "marketCapChangePercentage24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "circulatingSupply",
+            "columnName": "circulatingSupply",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "totalSupply",
+            "columnName": "totalSupply",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "maxSupply",
+            "columnName": "maxSupply",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "ath",
+            "columnName": "ath",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "athChangePercentage",
+            "columnName": "athChangePercentage",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "athDate",
+            "columnName": "athDate",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "atl",
+            "columnName": "atl",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "atlChangePercentage",
+            "columnName": "atlChangePercentage",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "atlDate",
+            "columnName": "atlDate",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "isFavorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "coin_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `symbol` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `image` TEXT NOT NULL, `marketCapRank` INTEGER, `currentPrice` REAL NOT NULL, `marketCap` INTEGER NOT NULL, `totalVolume` INTEGER NOT NULL, `high24h` REAL NOT NULL, `low24h` REAL NOT NULL, `priceChange24h` REAL, `priceChangePercentage24h` REAL, `priceChangePercentage7d` REAL, `priceChangePercentage14d` REAL, `priceChangePercentage30d` REAL, `priceChangePercentage60d` REAL, `priceChangePercentage200d` REAL, `priceChangePercentage1y` REAL, `marketCapChange24h` REAL, `marketCapChangePercentage24h` REAL, `circulatingSupply` REAL, `totalSupply` REAL, `maxSupply` REAL, `ath` REAL NOT NULL, `athChangePercentage` REAL NOT NULL, `athDate` TEXT NOT NULL, `atl` REAL NOT NULL, `atlChangePercentage` REAL NOT NULL, `atlDate` TEXT NOT NULL, `homepage` TEXT NOT NULL, `blockchainSite` TEXT NOT NULL, `officialForumUrl` TEXT NOT NULL, `subredditUrl` TEXT, `lastUpdated` TEXT NOT NULL, `isFavorite` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketCapRank",
+            "columnName": "marketCapRank",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "currentPrice",
+            "columnName": "currentPrice",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketCap",
+            "columnName": "marketCap",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalVolume",
+            "columnName": "totalVolume",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "high24h",
+            "columnName": "high24h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "low24h",
+            "columnName": "low24h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priceChange24h",
+            "columnName": "priceChange24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage24h",
+            "columnName": "priceChangePercentage24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage7d",
+            "columnName": "priceChangePercentage7d",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage14d",
+            "columnName": "priceChangePercentage14d",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage30d",
+            "columnName": "priceChangePercentage30d",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage60d",
+            "columnName": "priceChangePercentage60d",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage200d",
+            "columnName": "priceChangePercentage200d",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "priceChangePercentage1y",
+            "columnName": "priceChangePercentage1y",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "marketCapChange24h",
+            "columnName": "marketCapChange24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "marketCapChangePercentage24h",
+            "columnName": "marketCapChangePercentage24h",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "circulatingSupply",
+            "columnName": "circulatingSupply",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "totalSupply",
+            "columnName": "totalSupply",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "maxSupply",
+            "columnName": "maxSupply",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "ath",
+            "columnName": "ath",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "athChangePercentage",
+            "columnName": "athChangePercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "athDate",
+            "columnName": "athDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "atl",
+            "columnName": "atl",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "atlChangePercentage",
+            "columnName": "atlChangePercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "atlDate",
+            "columnName": "atlDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homepage",
+            "columnName": "homepage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blockchainSite",
+            "columnName": "blockchainSite",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "officialForumUrl",
+            "columnName": "officialForumUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subredditUrl",
+            "columnName": "subredditUrl",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "isFavorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "market_charts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cacheKey` TEXT NOT NULL, `coinId` TEXT NOT NULL, `days` INTEGER NOT NULL, `prices` TEXT NOT NULL, `marketCaps` TEXT NOT NULL, `totalVolumes` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, PRIMARY KEY(`cacheKey`))",
+        "fields": [
+          {
+            "fieldPath": "cacheKey",
+            "columnName": "cacheKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coinId",
+            "columnName": "coinId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "days",
+            "columnName": "days",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prices",
+            "columnName": "prices",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketCaps",
+            "columnName": "marketCaps",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalVolumes",
+            "columnName": "totalVolumes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "cacheKey"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1953e188e76963896b6d1cd63a07ae65')"
+    ]
+  }
+}
