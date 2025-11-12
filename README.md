@@ -20,6 +20,9 @@ This project is a Crypto Wallet App UI that integrates with the CoinGecko API to
 *   **Networking:** Ktor
 *   **Architecture:** MVVM
 
+## Screenshots
+<img width="269" height="598" alt="image" src="https://github.com/user-attachments/assets/72d1f22f-bac6-4716-ac44-55b5364851a8" /> <img width="269" height="598" alt="image" src="https://github.com/user-attachments/assets/74fd050e-45e7-4b14-88c2-256b1abebed4" /> <img width="269" height="598" alt="image" src="https://github.com/user-attachments/assets/18953fb5-a519-4cd5-a5af-ecb89da5606f" /> <img width="269" height="598" alt="image" src="https://github.com/user-attachments/assets/619b0b8d-fd54-4529-9511-47c3eee8b121" />
+
 ## Setup
 
 1.  **Clone the repository:**
@@ -67,9 +70,12 @@ CoinBit/
 └── README.md
 ```
 
-## Contributing
-
-Contributions are welcome! Please follow the established coding conventions and pull request process.
+## Links
+1. Demo Video
+    - 
+2. APK Link
+    - https://drive.google.com/file/d/1jl4TAJ4bVvO3b1nfTLkcfYxepXjM9Ui0/view?usp=sharing
+3. 
 
 ## License
 
