@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
@@ -7,6 +8,10 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
 }
+
+val properties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) properties.load(localPropertiesFile.inputStream())
 
 android {
     namespace = "com.ghostdev.coinbit"
@@ -22,7 +27,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
         // API Key from environment variable or use default for development
-        buildConfigField("String", "COIN_GECKO_API_KEY", "\"CG-cmKFrtyA6vaD6hgRb4P5FD7r\"")
+        buildConfigField("String", "COIN_GECKO_API_KEY", "\"${properties.getProperty("apiKey")}\"")
     }
 
     buildTypes {
